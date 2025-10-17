@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*body,header,section,div,h2,a,.dmenu {box-sizing: border-box;}*/
+summary {display: block;}
+
+header {position: relative;}
+
+#menu_wrap {
+    transition: all .5s;
+    width: 100%;
+    position: fixed;
+    left: 100%;
+    opacity: 0;
+}
+
+.nav-toggle:checked ~ #menu_wrap {
+    transition: all .5s;
+    width: 80%;
+    padding: 1em .5em 5em;
+    background-color: rgba(128, 200, 128, .9);
+    position: fixed;
+    top: 4em;
+    right: 0;
+    left: auto;
+    opacity: 1;
+}
+
+.btn-burger {
+    width: 3em;
+    position: absolute;
+    top: 50%;
+    right: .4em;
+}
+
+.icon,
+.icon:before,
+.icon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    /*線の太さ*/
+    width: 2em;
+    /*線の長さ*/
+    background-color: #444;
+    border-radius: 2px;
+    display: block;
+    cursor: pointer;
+    margin: auto;
+}
+
+.nav-toggle:checked ~ .btn-burger > .icon {
+    background-color: rgba(255, 255, 255, 0)
+}
+
+/*三本線の間隔*/
+.icon:before {top: -12px;}
+
+.nav-toggle:checked ~ .btn-burger .icon:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.icon:after {top: 12px;}
+
+.nav-toggle:checked ~ .btn-burger .icon:after {
+    top: auto;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+main {line-height: 1.6;}
+div {
+	margin: 1em auto auto;
+	width: 80%;
+}
+
+@media screen and (min-width:429px) {/* tel で電話発動はスマホだけで良かろうて */
+	a[href^="tel:"] {
+		pointer-events: none;
+		cursor: default;
+		text-decoration: inherit;
+		color: initial;
+	}
+}
+
+#site.development:has(#Cforce.Inc){}
+

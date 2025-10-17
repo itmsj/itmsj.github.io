@@ -1,0 +1,98 @@
+[
+    {
+        "path": "/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "#sp_sponsor_list", "url": "/incl/spespoList.php" },
+            { "selector": "#sponsor_list", "url": "/incl/nomspoList.php" },
+            { "selector": "#partner_list", "url": "/incl/parentList.php" },
+            { "selector": "#expartner_list", "url": "/incl/expparList.php" },
+            { "selector": "#sponsor_moji_list", "url": "/incl/txtspoList.php" },
+            { "selector": "#lcpartner_list", "url": "/incl/locspoList.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/entry/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/race_info/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/aquathlon/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/movie/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/traffic/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/result/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/start_list/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/activity/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/question/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/info/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/sdg/",
+        "targets": [
+            { "selector": ".fat-nav", "url": "/incl/menu.php" },
+            { "selector": "footer", "url": "/incl/footer.php" }
+        ]
+    },
+    {
+        "path": "/dummy/",
+        "targets": [
+            { "selector": "#info", "url": "/incl/Info.php" }
+        ]
+    }
+]

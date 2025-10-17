@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">[html タグ直後（head 前）に文字があった場合]
+<head>[head 直後に文字列があった場合]
+<meta charset="utf-8">
+<title>Tag-Check Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Music&family=Noto+Sans:ital,wght@0,400;0,900;1,600&display=swap" rel="stylesheet">
+<style>
+.NotoSans {font-family: 'Noto Sans', sans-serif;}
+</style>
+<!--<link rel="stylesheet" href="./css/destyle.css">-->
+<link rel="stylesheet" href="./tag-tmpl.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!--<script src="/js/script.js"></script>-->
+</head>
+<body>body 直後。日本語　alphabet<br>
+※html に背景可能。body に width 可。<br>min-width:769px で、max-width:1200px、margin:auto で左右センター成立。<br>
+1200px 以下、769px までは、width 100% 扱い
+<main>main 日本語　alphabet<br>
+<pre>*:not(html) {
+	background-color: #fff;
+	border: solid 1px;
+	margin: 0 .5em;
+}
+を、全体適用。<!--margin のみ、768px 以下に適用--></pre>
+
+<hr>
+セクション　タグ<br>
+<address>address 日本語　alphabet
+</address><br>
+<article>article 日本語　alphabet
+</article><br>
+<aside>aside 日本語　alphabet
+</aside><br>
+<footer>footer 日本語　alphabet
+</footer><br>
+<header>header 日本語　alphabet
+</header><br>
+<h1>h1 日本語　alphabet</h1><br>
+<h2>h2 日本語　alphabet</h2><br>
+<h3>h3 日本語　alphabet</h3><br>
+<h4>h4 日本語　alphabet</h4><br>
+<h5>h5 日本語　alphabet</h5><br>
+<h6>h6 日本語　alphabet</h6><br>↑ br を入れなくても、閉めタグで改行される設定を確認
+<h7>h7（勝手タグ） 日本語　alphabet</h7>
+<h8>h8（勝手タグ） 日本語　alphabet</h8>← 勝手タグは、display が inline となるため、br が無いと、閉めタグだけでは改行されない。<br>br 無しにしたいなら、display block 等 CSS を追記。
+<hgroup>hgroup 日本語　alphabet　（HTML5で削除）</hgroup><br>
+<nav>nav 日本語　alphabet</nav><br>
+<section>section 日本語　alphabet</section><br>
+<search>search 日本語　alphabet</search><br>
+
+<hr>
+グルーピング　タグ<br>
+<blockquote>blockquote 日本語　alphabet</blockquote><br>
+<div>div 日本語　alphabet</div><br>
+<dl>dl 日本語　alphabet
+<dt>dt 日本語　alphabet</dt>
+<dd>dd 日本語　alphabet</dd>
+</dl>
+↓↓↓　dl に何も文字が入らない場合の空白確認↓↓↓
+<dl>
+<dt>dt 日本語　alphabet</dt>
+<dd>dd 日本語　alphabet</dd>
+</dl>
+
+<figure>figure 日本語　alphabet
+<figcaption>figure 内、<br>figcaption 日本語　alphabet　br 機能する</figcaption>
+</figure>
+
+<ol>ol 日本語　alphabet
+<li>li 日本語　alphabet</li>
+<li>li 日本語　alphabet</li>
+<li>li 日本語　alphabet</li>
+</ol>
+
+<p>p 日本語　alphabet
+</p><br>
+<pre>pre 日本語　alphabet
+</pre>
+
+<ul>ul 日本語　alphabet（menu と同じだが、list-style のマーク位置が違う）
+<li>li 日本語　alphabet</li>
+<li>li 日本語　alphabet</li>
+<li>li 日本語　alphabet</li>
+</ul>
+
+<hr>
+テキスト タグ<br>
+
+<a>a 日本語　alphabet</a><br>
+<abbr>abbr 日本語　alphabet</abbr><br>
+<b>b 日本語　alphabet</b><br>
+<bdi>bdi 日本語　alphabet</bdi><br>
+<bdo>bdo 日本語　alphabet</bdo>
+<br>br<br>
+<cite>cite 日本語　alphabet</cite><br>
+<code>code 日本語　alphabet</code><br>
+<dfn>dfn 日本語　alphabet</dfn><br>
+<em>em 日本語　alphabet</em><br>
+<i>i 日本語　alphabet</i><br>
+<kbd>kbd 日本語　alphabet</kbd><br>
+<mark>mark 日本語　alphabet</mark><br>
+<q>q 日本語　alphabet</q><br>
+<ruby>ruby 日本語　alphabet</ruby><br>
+<rt>rt 日本語　alphabet</rt><br>
+<rp>rp 日本語　alphabet</rp><br>
+<small>small 日本語　alphabet</small><br>
+<s>s 日本語　alphabet</s><br>
+<samp>samp 日本語　alphabet</samp><br>
+<span>span 日本語　alphabet</span><br>
+<strong>strong 日本語　alphabet</strong><br>
+<sub>sub 日本語　alphabet</sub><br>
+<sup>sup 日本語　alphabet</sup><br>
+<time>time 日本語　alphabet</time><br>
+<u>u 日本語　alphabet</u><br>
+<var>var 日本語　alphabet</var><br>
+
+<hr>
+エディット　タグ<br>
+<ins>ins</ins><br>
+
+<del>del</del><br>
+
+<hr>
+エンベッド　タグ<br>
+area map の子要素<br>
+img<br>
+iframe<br>
+embed <br>
+object<br>
+param<br>
+video <br>
+audio <br>
+source <br>
+track <br>
+canvas <br>
+map<br>
+
+<hr>
+テーブル　タグ<br>
+<table>[table 直後の文字がココ。]<br>
+<caption>[table 直下 caption 内に書くとココ。]</caption><br>
+<colgroup span="2">[table > caption 直下 colgroup 2列のグループ化]
+<col>[col colgroup 内記述1。さらにグループ化？]
+<col>[col colgroup 内記述2。さらにグループ化？]
+</colgroup><br>
+<thead>[thead 直後記述]<br>
+<tr>[tr 直後記述]
+<th>[thead 内 th 見出しの要素を設定　見出し１]</th>
+<th>[thead 内 th 見出しの要素を設定　見出し２]</th>
+</tr>
+</thead>
+<tbody>[tbody 直後記述]
+<tr>[tbody 内 tr 直後記述]
+<th>[tbody > tr 内 th]</th>
+<td>[tbody > tr 内 td]</td>
+[/tr 直前記述。]</tr>
+[/tr 直後、/tbody 直前記述。]</tbody>
+[/tbody 直後、tfoot 直前記述。]
+<tfoot>[tfoot tbody の前後で利用するらしい。集計見出しのようなもの？]
+<td>tfoot-td　記載１</td><td>tfoot-td　記載２</td>
+</tfoot>
+<caption>/table 直前に置いてみた caption。<br>したがって、/table 直前に書いても、table 表示の上部に、table の margin にプラス margin が適用され、テキストはセンタリング表示される。</caption>
+</table><br>
+
+<hr>
+フォーム　タグ
+<form>form 直後記述。
+<fieldset>fieldset</fieldset>
+<legend>legend</legend>
+<label>label<input></label><br>
+<button>button</button>
+<select>select</select>← select 単体
+<br>
+<input name="html5" list="datalist-test">
+<datalist id="datalist-test">
+	<option>datalist HTML5新 optgroup は使えないらしい。</option>
+	<option>入力候補１</option>
+	<option>入力候補２</option>
+	<option>入力候補３</option>
+<option>input 連携で、入力候補以外の入力も出来るらしい。</option>
+</datalist>
+
+<select>
+	<optgroup label="optgroup　で選択肢のグループ化">
+		<option>option1-1</option>
+		<option>option1-2</option>
+		<option>option1-3</option>
+	</optgroup>
+	<optgroup label="select 内optgroup2">
+		<option>option2-1</option>
+		<option>option2-2</option>
+		<option>option2-3</option>
+	</optgroup>
+	<optgroup label="optgroup３">
+		<option>option3-1</option>
+		<option>option3-2</option>
+		<option>option3-3</option>
+	</optgroup>
+</select>
+
+<textarea>textarea</textarea>
+
+<br>
+<keygen>keygen HTML5新　閉め無し 行頭バー付？<br><br>
+<output>output HTML5新</output>
+<br>
+<progress>progress</progress>← progress HTML5新 
+<br>
+<meter>meter</meter>← meter 
+</form><br>
+
+<hr>
+インタラクティブ　タグ<br>details open　でセット
+<details open>details 直後(summary 前)に記載すると、ココ
+<summary>summary</summary>
+<div>details 内、summary 直後、div で設置。非表示／表示コンテンツ</div>
+<div>/details までの間が、非表示／表示コンテンツ</div>
+</details><br>
+
+<menu class="NotoSans">menu 日本語　alphabet（ul と同じだが、list-style のマーク位置が違う）
+<li>li 日本語　alphabet</li>
+<li>li 日本語　alphabet</li>
+<li>li 日本語　alphabet</li>
+</menu>
+
+ウェブコンポーネント タグ, slot, template<br>
+  <details open>
+    <summary>summary 内に入れてみる<br>ついでに summary で br 機能する確認</summary>
+      <code class="name">code 日本語　alphabet
+        &lt;<slot name="element-name">slot 日本語　alphabet</slot>&gt;
+      </code>
+      <span class="desc"><slot name="description">slot NEED DESCRIPTION</slot></span>
+    <div class="attributes">div 内
+      <h4>h4 Attributes</h4>
+      <slot name="attributes">slot 直後記述 →p <p>slot 内p Text</p>
+		  <div>slot 内div</div></slot>
+    </div>
+  </details>
+<br>
+↓ template 内は、非表示となる。
+<template id="my-paragraph">template 日本語　alphabet
+  <style>
+    p {
+      color: white;
+      background-color: #666;
+      padding: 5px;
+    }
+  </style>
+  <p>My paragraph</p>
+
+  <details>
+    <summary>
+      <code class="name">
+        &lt;<slot name="element-name">NEED NAME</slot>&gt;
+      </code>
+      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
+    </summary>
+    <div class="attributes">
+      <h4>Attributes</h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+</template>
+
+</main>
+</body>[/body タグ直後（/html 前）に文字があった場合]</html>

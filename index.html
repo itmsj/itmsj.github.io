@@ -1,11 +1,122 @@
 <!DOCTYPE html>
-<html><head>
-<style>
-  h1 {color: #00f;}
-</style>
-<script></script>
-</head><body>
-<h1>Hoge</h1>
-<p>Index GitHub Pages.</p>
-<script></script>
-</body><!--Test--></html>
+<html lang="ja"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWPWC7Z');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<title>HTML5-JS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- GA, OGP 等 -->
+<script>const elmA = document.querySelector('head');
+//elmA.insertAdjacentHTML('afterbegin',document('/js/incl_head-ogp.php'));
+</script>
+<!-- reset系固定 link, script 等 -->
+<script>
+document.currentScript.insertAdjacentHTML('beforebegin', '<link rel="stylesheet" href="/css/destyle.css">');
+</script>
+<!-- 共通 CSS -->
+<!--link rel="stylesheet" href="/css/common.css"-->
+<!-- 個別ページ CSS, JS -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--script src="/js/script.js"></script-->
+<script src="/js/fileSizeGetter.js"></script>
+<script src="/js/del_chche.js"></script>
+<script src="/js/inclConf.js"></script>
+</head><body><!-- jQuery incl_gtmbody -->not PHP, JS Site<br>
+<div id="gtm">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-[YourNum]"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+
+<!-- /incl_gtmbody -->
+    <button type="button" class="drawer-toggle drawer-hamburger"><span class="sr-only">toggle navigation</span><span class="drawer-hamburger-icon"></span></button>
+    <div class="drawer-nav" role="navigation"><!-- incl_sp-menu -->
+<!-- /incl_sp-menu --></div>
+    <header><!-- incl_gl-menu -->
+<!-- /incl_gl-menu --></header>
+<script><!--
+    $('.drawer-nav').load('./js/js_incl.htm .drawer-nav .sp_wrap');
+//--></script>
+<script><!--
+    $('header').load('./js/js_incl.htm header .header_wrap');
+//--></script>
+<main>
+   Contents
+<div>
+<p><b>指定classを持つa要素</b></p>
+<a class="test" href="/data/sample.png" alt="サンプルpng">サンプルpng</a><br />
+<a class="test" href="/data/sample.pdf" target="_blank" alt="サンプルpdf">サンプルpdf</a><br />
+<a class="test" href="/data/sample.ppt" alt="サンプルppt">サンプルppt</a><br />
+<a class="test" href="/data/sample.zip" alt="サンプルzip">サンプルzip</a><br />
+<a class="test" href="#" alt="通常リンク">通常リンク</a><br />
+<a class="test" href="javascript:alert('sample');" alt="javascript">javascript</a><br />
+<a class="test" href="/data/sample.doc" alt="存在しないファイル">存在しないファイル</a><br />
+<a class="test" href="/data/sample.lzh" alt="サンプルlzh">サンプルlzh</a><br />
+</div>
+
+<div class="Nav-list">
+<p><b>指定class名を持たないa要素</b></p>
+<a href="/data/sample.png" alt="サンプルpng">サンプルpng</a><br />
+<a href="/data/sample.pdf" target="_blank" alt="サンプルpdf">サンプルpdf</a><br />
+<a href="/data/sample.ppt" alt="サンプルppt">サンプルppt</a><br />
+<a href="/data/sample.zip" alt="サンプルzip">サンプルzip</a><br />
+<a href="#" alt="通常リンク">通常リンク</a><br />
+<a href="javascript:alert('sample');" alt="javascript">javascript</a><br />
+<a href="/data/sample.doc" alt="存在しないファイル">存在しないファイル</a><br />
+<a href="/data/sample.lzh" alt="サンプルlzh">サンプルlzh</a><br />
+</div>
+<hr>
+<p>差し込みテスト</p>
+  <nav>PHP と共通パーツとした場合、li 部分のみを差し込む
+    <ul id="commonList">
+<!-- native JSで、共通の <li> 部分を挿入 -->
+    </ul>
+  </nav>
+<hr>
+</main>
+    <footer><!-- incl_footer -->
+    <!-- /incl_footer --></footer>
+<div id="page-top"><a href="#main_img"><img src="./images/top.png" alt="ページトップへ"></a></div>
+
+<script><!--
+// `.Nav-list` 内の `<a>` 要素を処理
+const navLinks = document.querySelectorAll('.Nav-list a[href]'); // `.Nav-list` 内の全ての <a> 要素
+
+navLinks.forEach((link) => {
+  const currentHref = link.getAttribute('href');
+  // 先頭に /Cf_Site/ を挿入
+  const modifiedHref = `/Cf_Site${currentHref}`;
+  link.setAttribute('href', modifiedHref);
+
+  console.log(`Updated Nav-list href: ${modifiedHref}`);
+});
+
+// その他の `<a>` と `<img>` 要素を処理
+const otherElements = document.querySelectorAll('a[href], img[src]'); // href を持つ <a> と src を持つ <img> を取得
+
+otherElements.forEach((element) => {
+  // `.Nav-list` 内の `<a>` は除外
+  if (element.closest('.Nav-list')) return;
+
+  const attrName = element.hasAttribute('src') ? 'src' : 'href'; // src か href を判定
+  const currentValue = element.getAttribute(attrName);
+
+  // /images/ で始まるか確認
+  if (currentValue.startsWith('/images/')) {
+    // 先頭に /Cf_Site/ を挿入
+    const modifiedValue = `/Cf_Site${currentValue}`;
+    element.setAttribute(attrName, modifiedValue);
+
+    console.log(`Updated ${attrName}: ${modifiedValue}`);
+  }
+});
+//--></script>
+</body><!-- (C) Cforce Inc. --></html>
